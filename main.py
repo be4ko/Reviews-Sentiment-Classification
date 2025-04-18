@@ -1,3 +1,4 @@
+# بسم الله الرحمن الرحيم
 # import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -49,4 +50,3 @@ X_train, X_test, y_train, y_test = train_test_split(
     df['cleaned_review'], df['sentiments'], test_size=0.2, random_state=42
 )
 print("training finished")
-
