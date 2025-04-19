@@ -5,6 +5,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import SnowballStemmer
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Download only once :)
 # nltk.download('punkt')
@@ -50,3 +51,24 @@ X_train, X_test, y_train, y_test = train_test_split(
     df['cleaned_review'], df['sentiments'], test_size=0.2, random_state=42
 )
 print("training finished")
+
+
+#########################################################
+## 4. TF-IDF Vectorization                           ##
+#########################################################
+
+
+print("Applying TF-IDF vectorization...")
+vectorizer = TfidfVectorizer()
+X_train_tfidf = vectorizer.fit_transform(X_train)
+X_test_tfidf = vectorizer.transform(X_test)
+print(f"TF-IDF Train shape: {X_train_tfidf.shape}")
+print(f"TF-IDF Test shape: {X_test_tfidf.shape}")
+
+idf = vectorizer.idf_
+feature_names = vectorizer.get_feature_names_out()  
+idf_dict = dict(zip(feature_names, idf))
+print("\nIDF Values:")
+print(idf_dict)
+
+
