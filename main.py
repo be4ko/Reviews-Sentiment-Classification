@@ -53,15 +53,12 @@ print("Preprocessing finished")
 ## 3. Data splitting into 80% training and 20% testing.##
 #########################################################
 
-print("training ...")
 X_train, X_test, y_train, y_test = train_test_split(
     df['cleaned_review'], df['sentiments'], test_size=0.2, random_state=42
 )
-print("training finished")
-
 
 #########################################################
-## 4. TF-IDF Vectorization                           ##
+## 4. TF-IDF Vectorization                             ##
 #########################################################
 
 
@@ -131,4 +128,3 @@ while True:
     print("Naive Bayes Prediction: ",pred_nb)
 
 print("Predictions finished")
-
