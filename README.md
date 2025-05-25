@@ -58,9 +58,6 @@ Review: "It's okay, not too bad but not great either."
 Predicted Sentiment: Neutral
 ```
 
-## Report 🗂️
-[Click here](https://docs.google.com/document/d/19P0s-74OaBlBpkmF843MGqy28ghR5xIUROVidZNHPO0/edit?usp=sharing) to see the project report
-
 ## Contributors 🤝
 - Mazen Ahmoudadly
 - Salah Eddin
